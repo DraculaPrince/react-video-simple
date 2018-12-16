@@ -1,0 +1,45 @@
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+video {
+  max-width: 100%;
+  display: block;
+  transition: all .3s ease;
+}
+
+.play-btn {
+  position: absolute;
+  color: #fff;
+  z-index: 20;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.play-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen {
+  position: fixed;
+  transform: rotate(90deg);
+  transform-origin: bottom left;
+  width: 100vh;
+  height: 100vw;
+  margin-top: -4.62rem;
+  object-fit: cover;
+  visibility: visible;
+}
+
+.video-mask.fullscreen {
+  margin-top: -100vw;
+}
+

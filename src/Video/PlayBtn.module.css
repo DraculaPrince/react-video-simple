@@ -1,0 +1,17 @@
+.circle {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: rgba(0,0,0, .3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: .3rem solid transparent;
+  border-bottom: .3rem solid transparent;
+  border-left: .35rem solid rgba(255, 255, 255, .8);
+}
