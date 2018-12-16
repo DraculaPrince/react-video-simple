@@ -8,6 +8,7 @@ const shouldUseSourceMap = false
 // common function to get style loaders
 const getStyleLoaders = (cssOptions, preProcessor) => {
   const loaders = [
+    require.resolve('style-loader'),
     {
       loader: require.resolve('css-loader'),
       options: cssOptions,
@@ -30,17 +31,11 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
             stage: 3,
           }),
         ],
-        sourceMap: shouldUseSourceMap,
       },
     },
   ];
   if (preProcessor) {
-    loaders.push({
-      loader: require.resolve(preProcessor),
-      options: {
-        sourceMap: shouldUseSourceMap,
-      },
-    });
+    loaders.push(require.resolve(preProcessor));
   }
   return loaders;
 };

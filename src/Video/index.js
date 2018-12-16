@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import styles from './Video.module.css';
 import framework from '../framework'
 import network from '../utils/network'
 import MaskWrap from './MaskWrap'
+
+import './Video.css'
 
 class Video extends Component {
 
@@ -99,7 +100,7 @@ class Video extends Component {
     const { showingControlBtn, playing, isFullScreen, connectionType } = this.state
 
     return (
-      <div className={styles.container}>
+      <div className='video-container'>
         <MaskWrap fullscreen={fullscreen}
                   connectionType={connectionType}
                   isFullScreen={isFullScreen}
@@ -110,7 +111,7 @@ class Video extends Component {
                   toggleShowingControlBtn={() => this.toggleShowingControlBtn()}/>
         <video id='video'
                ref={this.videoRef}
-               className={`${isFullScreen ? styles['fullscreen'] : ''}`}
+               className={`${isFullScreen ? 'fullscreen' : ''}`}
                src='https://media.w3.org/2010/05/sintel/trailer.mp4'
                poster='https://media.w3.org/2010/05/sintel/poster.png'>
           <track kind="captions"/>

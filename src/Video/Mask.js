@@ -1,9 +1,8 @@
-import styles from './Mask.module.css'
 import React from 'react'
 
 const Mask = ({ isFullScreen, children, handleClick }) => {
   return (
-    <div className={isFullScreen ? `${styles['fullscreen']} ${styles['video-mask']}` : `${styles['video-mask']}`}
+    <div className={isFullScreen ? 'fullscreen video-mask' : 'video-mask'}
          role='button'
          tabIndex='-1'
          onKeyPress={() => {

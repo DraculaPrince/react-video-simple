@@ -1,11 +1,10 @@
 import React from 'react'
-import styles from './PauseBtn.module.css'
 
 const PauseBtn = ({handleClick}) => {
   return (
-    <div className={styles.circle} role='button' tabIndex={0} onKeyPress={() => {}} onClick={handleClick}>
-      <span></span>
-      <span></span>
+    <div className='play-btn-wrap' role='button' tabIndex={0} onKeyPress={() => {}} onClick={handleClick}>
+      <span className='pause-line'></span>
+      <span className='pause-line'></span>
     </div>
   )
 }

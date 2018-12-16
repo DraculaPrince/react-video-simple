@@ -6,6 +6,13 @@
   "repository": "https://github.com/pengqin33/react-video-simple.git",
   "author": "pengqin",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "media",
+    "player",
+    "video",
+    "react-component"
+  ],
   "peerDependencies": {
     "react": "*"
   },
