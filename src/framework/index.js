@@ -1,5 +1,6 @@
 import { UP_HYBRID_STR } from '../utils/constant'
 import {log} from '../utils/log'
+import cordovaUtil from './CordovaUtil'
 
 export class Framework {
   constructor () {
@@ -14,8 +15,7 @@ export class Framework {
     try {
       this.wrapName = this.getWrapEnv()
       if (this.wrapName === UP_HYBRID_STR) {
-        const { default: cordovaUtil } = await import('./CordovaUtil')
-        this.cordovaUtil = cordovaUtil
+       this.cordovaUtil = cordovaUtil
         await cordovaUtil.init()
         this.deviceIsReady = true
         return true

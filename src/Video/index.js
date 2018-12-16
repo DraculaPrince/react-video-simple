@@ -111,7 +111,7 @@ class Video extends Component {
         <video id='video'
                ref={this.videoRef}
                className={`${isFullScreen ? styles['fullscreen'] : ''}`}
-               src={require('../assets/video/trailer.mp4')}
+               src='https://media.w3.org/2010/05/sintel/trailer.mp4'
                poster='https://media.w3.org/2010/05/sintel/poster.png'>
           <track kind="captions"/>
         </video>
